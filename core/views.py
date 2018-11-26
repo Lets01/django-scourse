@@ -2,15 +2,10 @@
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from catalog.models import Category
 
 def index(request):
     return render(request, 'index.html')
 
 def contact(request):
     return render(request, 'contact.html')
-
-def curso_list(request):
-    return render(request, 'curso_list.html')
-
-def curso(request):
-    return render(request, 'curso.html')
