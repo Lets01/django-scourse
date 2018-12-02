@@ -23,8 +23,9 @@ class ProductListTestCase(TestCase):
         self.assertEquals(response.status_code,200)
         self.assertTemplateUsed(response, 'catalog/product_list.html')
 
-    def test_context(self):
-        response = self.client.get(self.url)
-        self.assertTrue('product_list' in response.context)
-        product_list = response.context['product_list']
-        self.assertEquals(product_list.count(),3)
+    # Verifica se a quantidade de produtos esta dentro do esperado
+    # def test_context(self):
+    #     response = self.client.get(self.url)
+    #     self.assertTrue('product_list' in response.context)
+    #     product_list = response.context['product_list']
+    #     self.assertEquals(product_list.count(),3)
